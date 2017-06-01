@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script>
+    <script src="iphone-inline-video.browser.js"></script>
+    <script src="mobile-detect.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="javascript">
+        var clickTag = "https://www.google.com";
+    </script>
+</head>
+<body>
+    <div class="loader">
+        <img src="loader.svg" alt="" />
+    </div>
+    <div class="container" style="display:none;">
+        <div class="banner">
+
+            <div class="frame-content clicktag" id="messaging-frame-01">
+                    <div id="frame01-line-01">
+                        <p id="frame-01-word-01">Discover</p>
+                        <p id="frame-01-word-02">the</p>
+                        <p id="frame-01-word-03">new</p>
+                    </div>
+                    <div id="frame01-line-02">
+                        <p id="frame-01-word-04">Qantas</p>
+                        <p id="frame-01-word-05">Premier</p>
+                    </div>
+                    <div id="frame01-line-03">
+                        <p id="frame-01-word-06">credit</p>
+                        <p id="frame-01-word-07">card.</p>
+                    </div>
+            </div>
+
+            <div class="frame-content clicktag" id="messaging-frame-02">
+
+                    <div id="frame02-line-01">
+                        <p id="frame-02-word-01">Up</p>
+                        <p id="frame-02-word-02">to</p>
+                    </div>
+                    <div id="frame02-line-02">
+                        <p id="frame-02-word-03">2</p>
+                        <p id="frame-02-word-04">Qantas</p>
+                        <p id="frame-02-word-05">Points</p>
+                    </div>
+                    <div id="frame02-line-03"><p>
+                        <p>per $1 on selected purchases<span id="asterisk">^</span>.</p>
+                    </div>
+
+            </div>
+
+            <div class="frame-content clicktag" id="messaging-endframe">
+                <div id="points-container">
+                      <div id="points-copy">
+                          <p id="thousands-countdown">59</p>
+                          <p id="comma-countdown">,</p>
+                          <p id="hundreds-countdown">900</p>
+                      </div>
+                    <p id="bonus">bonus</p>
+                </div>
+                <p id="qantas-points">Qantas Points<span id="asterisk">*</span>.</p>
+                <button id="cta-button">Apply Now</button>
+            </div>
+
+<!--             <div class="terms-frame-01">
+                <span>*Issued by Citigroup Pty Ltd ABN 88 004 325 080 ACL 238098</span>
+            </div> -->
+            <div class="terms-frame-02">
+                <span>^Based on Qantas Spend Earn Rate. Conditions apply.</span>
+            </div>
+            <div class="terms-frame-03">
+                <span>*Apply by 31 Aug 2017. Min spend $3,000 within 90 days of approval, exclusions apply.</span>
+            </div>
+            <div class="terms-endframe">
+                <span>*Apply by 31 Aug 2017. Min spend $3000 within 90 days of approval, exclusions apply. Credit criteria, fees & charges, T&C’s apply. Issued by Citigroup Pty Ltd ABN 88 004 325 080 ACL 238098.</span>
+            </div>
+            <div class="clicktag" id="logos-container">
+                <div class='logo-divider-line'></div>
+                <img class="logo-qantas" src="logo-qantas.svg" alt="" />
+                <img class="logo-qantas-money" src="logo-qantas-money.svg" alt="" />
+                <img class="logo-partner" src="logo-partner.svg" alt="" />
+            </div>
+
+            <div class="cardWrapper">
+                <div class="card">
+                    <div class="cardFace front"><img src="card-front.png"></div>
+                    <div class="cardFace back"><img src="card-back.png"></div>
+                </div>
+            </div>
+
+            <!-- --------------------------- Intro Animation/Shapes ------------------------------- -->
+
+            <div class="shapes clicktag">
+
+                <!-- Blue Shape -->
+                <svg id="blue-shape" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 113 111" style="enable-background:new 0 0 113 111;" xml:space="preserve">
+                    <style type="text/css">
+                        .the-circle{fill:url(#SVGID_1_);}
+                    </style>
+                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="22.5589" y1="90.4411" x2="113.782" y2="-0.782" gradientTransform="matrix(1 0 0 -1 0 112)">
+                        <stop  offset="0.1055" style="stop-color:#8DE2E0"/>
+                        <stop  offset="1" style="stop-color:#8DE2E0;stop-opacity:0"/>
+                    </linearGradient>
+                    <circle class="the-circle" cx="56.5" cy="55.5" r="48"/>
+                </svg>
+
+                <!-- Small Blue Shape -->
+                <svg id="blue-shape-small" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 113 111" style="enable-background:new 0 0 113 111;" xml:space="preserve">
+                    <style type="text/css">
+                        .the-circle-small{fill:url(#SVGID_2_);}
+                    </style>
+                    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="22.5589" y1="90.4411" x2="113.782" y2="-0.782" gradientTransform="matrix(1 0 0 -1 0 112)">
+                        <stop  offset="0.1055" style="stop-color:#8DE2E0"/>
+                        <stop  offset="1" style="stop-color:#8DE2E0;stop-opacity:0"/>
+                    </linearGradient>
+                    <circle class="the-circle-small" cx="56.5" cy="55.5" r="48"/>
+                </svg>
+
+                <!-- Mask Shape -->
+                <svg id="mask-shape" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6866 4833" style="enable-background:new 0 0 6866 4833;" xml:space="preserve">
+                    <style type="text/css">
+                        .mask-shape-path{fill:#F5F5F5;}
+                    </style>
+                    <path id="XMLID_4_" class="mask-shape-path" d="M6641.5,4585.3h-6400v-4304h6400V4585.3z M3271.8,2350.6c-53.1,0-86.2,27.4-86.2,71.3
+                        c0,40.5,35.8,110.3,93.2,110.3c53.1,0,113.5-53.7,115.2-100.3C3395.4,2391.4,3346.2,2350.6,3271.8,2350.6z"/>
+                </svg>
+            </div>
+            <!-- --------------------------- End Intro Animation/Shapes ------------------------------- -->
+
+            <!-- --------------------------- Base Shapes ------------------------------- -->
+
+            <!-- Partnership White Shape  SMALL-->
+            <svg class="clicktag" version="1.1" id="partnership-white-shape-small" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 838 462" style="enable-background:new 0 0 838 462;" xml:space="preserve">
+                <style type="text/css">
+                    .partnership-shape-small-path{fill:url(#white-grad-values-small);}
+                </style>
+                <radialGradient id="white-grad-values-small" cx="9.0178" cy="110.8564" r="405.481" gradientTransform="matrix(-0.9173 -0.3981 -0.3981 0.9173 811.8777 119.84)" gradientUnits="userSpaceOnUse">
+                    <stop id="white-grad-small-stop-01" offset="0.316" stop-color="#FFFFFF" stop-opacity="0"/>
+<!--                    <stop id="white-grad-small-stop-02" offset="0.6" stop-color="#FFFFFF" stop-opacity="0"/>-->
+                    <stop id="white-grad-small-stop-02" offset="0.77" stop-color="#FFFFFF" stop-opacity="0"/>
+<!--                    <stop id="white-grad-small-stop-03" offset=".8" stop-color="#FFFFFF" stop-opacity="0"/>-->
+                    <stop id="white-grad-small-stop-03" offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+                </radialGradient>
+                <path class="partnership-shape-small-path" d="M368.9,392.1c-113-34.9-233.6-75.8-311.5-101c-31.1-10.1-34.5-53.2-5.2-68.4c55.3-28.6,165.9-85.8,221.1-114.3
+                    c62.2-32.2,131.2-35.9,192.6-16c77.9,25.2,233.6,75.8,311.5,101c31.1,10.1,34.5,53.2,5.2,68.3c-55.3,28.6-165.9,85.8-221.1,114.3
+                    C499.3,408.3,430.2,412.1,368.9,392.1"/>
+            </svg>
+
+            <!-- Partnership White Shape  LARGE-->
+            <svg class="clicktag" version="1.1" id="partnership-white-shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 530 400" style="enable-background:new 0 0 530 400;" xml:space="preserve">
+                <style type="text/css">
+                    .partnership-shape-path{fill:url(#white-grad-values);}
+                </style>
+                <radialGradient id="white-grad-values" cx="-62.0673" cy="271.8216" r="967.0001" gradientUnits="userSpaceOnUse">
+                    <stop id="white-grad-stop-01" offset="0.2488" stop-color="#FFFFFF" stop-opacity="0"/>
+                    <stop id="white-grad-stop-02" offset="0.4532" stop-color="#FFFFFF" stop-opacity="0"/>
+                    <stop id="white-grad-stop-03" offset="0.5933" stop-color="#FFFFFF" stop-opacity="0"/>
+                </radialGradient>
+                <path class="partnership-shape-path" d="M420.8,92.6c-46.8,37.9-104.3,52.9-159.3,46.7c-86.8-8.5-178.9-19.7-247.5-27.6v274.9h504V14.1
+                    C482.3,42.9,444.7,73.3,420.8,92.6z"/>
+            </svg>
+
+            <!-- Gradient Red Shape  -->
+            <svg class="clicktag" version="1.1" id="red-gradient" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 838 462" style="enable-background:new 0 0 838 462;" xml:space="preserve">
+                <style type="text/css">
+                    .red-gradient-path{fill:url(#red-grad-values2);}
+                </style>
+                <radialGradient id="red-grad-values2" cx="68" cy="472" r="742.0027" gradientUnits="userSpaceOnUse">
+                    <stop  offset="0.316" style="stop-color:#F70500;stop-opacity:0"/>
+                    <stop  offset="0.7709" style="stop-color:#F70500;stop-opacity:0.9628"/>
+                    <stop  offset="1" style="stop-color:#F70500"/>
+                </radialGradient>
+                <path class="red-gradient-path" d="M400.8,49.6c136.1-15,282.9-27.2,377.3-36.3c37.7-3.6,61.1,40.6,37,70.2c-45.5,55.8-136.6,167.5-182.1,223.3
+                    c-51.2,62.8-122.8,98.6-197.1,105.7c-94.3,9.1-283,27.2-377.3,36.3c-37.7,3.6-61.1-40.6-37-70.1c45.5-55.8,136.6-167.5,182.1-223.3
+                    C254.9,92.5,326.5,56.7,400.8,49.6"/>
+            </svg>
+
+            <!-- Gradient Red Base  -->
+            <svg class="clicktag" version="1.1" id="base-red" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 250" style="enable-background:new 0 0 300 250;" xml:space="preserve">
+                <style type="text/css">
+                    .base-shape-path{fill:url(#red-grad-values);}
+                </style>
+                <radialGradient id="red-grad-values" cx="150" cy="125" r="150" gradientUnits="userSpaceOnUse">
+                    <stop id="base-grad-stop-01" offset="0" stop-color="#F70500" stop-opacity="1"/>
+                    <stop id="base-grad-stop-02" offset=".528" stop-color="#F70500" stop-opacity="1"/>
+                    <stop id="base-grad-stop-03" offset="1" stop-color="#F70500" stop-opacity="1"/>
+                </radialGradient>
+                <rect class="base-shape-path" width="300" height="250"/>
+            </svg>
+
+            <!-- Base Solid Red  -->
+            <div id="solid-red-base"></div>
+
+            <!-- --------------------------- End Base Shapes ------------------------------- -->
+
+            <!-- Background Images -->
+
+             <div class="bg-image clicktag">
+                <img class="bg-image-01" src="base-image-01.jpg" alt="" />
+            </div> 
+
+            <!-- End Background Images -->
+
+            <!-- Video container -->
+            <div id="video" class="clicktag">
+                <video id="video-el" autoplay playsinline muted>
+                    <source src="https://s3-ap-southeast-2.amazonaws.com/qloytest001/QLOY0032/Voyager_300x250.mp4" type="video/mp4">
+                    <source src="https://s3-ap-southeast-2.amazonaws.com/qloytest001/QLOY0032/Voyager_300x250.webm" type="video/webm">
+                </video>
+            </div>
+            <!-- End Video container -->
+
+        </div>
+    </div>
+    <script src="banner.min.js"></script>
+</body>
+</html>

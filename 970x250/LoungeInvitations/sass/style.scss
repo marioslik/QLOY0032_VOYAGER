@@ -1,0 +1,632 @@
+@charset "UTF-8";
+/* CSS Document */
+@import "normalize";
+$width:970;
+$height:250;
+$bannerWidth: $width + px;
+$bannerHeight: $height + px;
+@font-face {
+    font-family: 'Ciutadella-Medium';
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_0_0.eot');
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_0_0.eot?#iefix') format('embedded-opentype'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_0_0.woff2') format('woff2'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_0_0.woff') format('woff'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_0_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Ciutadella-Regular';
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_1_0.eot');
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_1_0.eot?#iefix') format('embedded-opentype'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_1_0.woff2') format('woff2'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_1_0.woff') format('woff'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_1_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'CiutadellaRounded-Rg';
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_2_0.eot');
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_2_0.eot?#iefix') format('embedded-opentype'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_2_0.woff2') format('woff2'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_2_0.woff') format('woff'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_2_0.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Ciutadella-regular', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow: hidden;
+}
+
+.copy {
+    font-family: 'Ciutadella-regular', sans-serif;
+    color: #fff;
+}
+
+.font-regular {
+    font-family: 'Ciutadella-regular', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+.font-medium {
+    font-family: 'Ciutadella-Medium', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+.font-rounded {
+    font-family: 'CiutadellaRounded-Rg', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+.copy {
+    font-family: 'Ciutadella-regular', sans-serif;
+    color: #fff;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin: 0;
+}
+
+button {
+    -webkit-appearance: none;
+    cursor: pointer;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    border-radius: 26px;
+    padding: 7px 22px 7px;
+    font-size: 19px;
+    line-height: 28px;
+    outline: none;
+}
+
+button.hover,
+button:hover {
+    background: white;
+    color: #ee0000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 31px;
+    line-height: 32px;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+h3 {
+    font-size: 13px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+.container {
+    display: none;
+    width: ($width)+px;
+    height: ($height)+px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.loader{
+    margin-left: auto;
+    margin-right: auto;
+    width: 968px;
+    height: 248px;
+    top: 0px;
+    left: 0px;
+    border: 1px solid #e2e2e2;
+    position: relative;
+}
+
+.loader img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 100px;
+    left: 460px;
+}
+
+.banner {
+    position: absolute;
+    width: ($width - 2)+px;
+    height: ($height - 2)+px;
+    top: 0px;
+    left: 0px;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    clip: rect(0px, 970px, $bannerHeight, 0px);
+    overflow: hidden;
+    border: 1px solid #e2e2e2;
+}
+
+.frame-content p {
+    font-size: 43px;
+    line-height: 45px;
+    text-align: left;
+    color: white;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+}
+
+#messaging-frame-01 {
+    position: absolute;
+    z-index: 200;
+    width: 500px;
+    top: 60px;
+    left: 105px;
+    p {
+        font-size:30px;
+        line-height:30px;
+        z-index:150;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+#frame01-line-01 {
+    position: absolute;
+    font-size:23px;
+    left:61px;
+    top:-6px;
+    #frame-01-word-01 {
+      position: absolute;
+      font-size:30px;
+      left:-28px;
+      top:5px;
+    }
+    #frame-01-word-02 {
+      position: absolute;
+      font-size:30px;
+      left:79px;
+      top:5px;
+    }
+    #frame-01-word-03 {
+      position: absolute;
+      font-size:30px;
+      left:122px;
+      top:5px;
+    }
+}
+#frame01-line-02 {
+    position: absolute;
+    font-size:35px;
+    left:34px;
+    top:2px;
+    #frame-01-word-04 {
+      position: absolute;
+      font-size:62px;
+      left:-31px;
+      top:40px;
+    }
+    #frame-01-word-05 {
+      position: absolute;
+      font-size:62px;
+      left:152px;
+      top:40px;
+    }
+}
+#frame01-line-03 {
+    position: absolute;
+    font-size:30px;
+    left:98px;
+    top:19px;
+    #frame-01-word-06 {
+      position: absolute;
+      font-size:46px;
+      left:2px;
+      top:70px;
+    }
+    #frame-01-word-07 {
+      position: absolute;
+      font-size:46px;
+      left:112px;
+      top:70px;
+    }
+}
+
+#messaging-frame-02 {
+  position: absolute;
+  z-index: 200;
+  width: 280px;
+  top: 58px;
+  left: 90px;
+  p {
+      z-index:150;
+      -webkit-font-smoothing: antialiased;
+  }
+}
+
+#frame02-line-01 {
+    position: absolute;
+    // font-size:23px;
+    left:61px;
+    top:-3px;
+    #frame-02-word-01 {
+      position: absolute;
+      font-size:62px;
+      left:-51px;
+      top:9px;
+    }
+    #frame-02-word-02 {
+      position: absolute;
+      font-size:35px;
+      left: -9px;
+      top: 0px;
+    }
+}
+#frame02-line-02 {
+    position: absolute;
+    font-size:35px;
+    left:31px;
+    top:37px;
+    #frame-02-word-03 {
+      position: absolute;
+      font-size:62px;
+      left:22px;
+      top:5px;
+    }
+    #frame-02-word-04 {
+      position: absolute;
+      font-size:62px;
+      left:198px;
+      top:5px;
+    }
+}
+#frame02-line-03 {
+    position: absolute;
+    // font-size:30px;
+    left:143px;
+    top:46px;
+    #frame-02-word-05 {
+      position: absolute;
+      font-size:30px;
+      left:69px;
+      top:40px;
+    }
+    #frame-02-word-06 {
+      position: absolute;
+      font-size:30px;
+      left:114px;
+      top:40px;
+    }
+    #asterisk {
+        font-family: 'Ciutadella-Regular';
+        font-size: 18px;
+        position: relative;
+        bottom:8px;
+        left:2px;
+    }
+}
+
+#messaging-endframe {
+    position: absolute;
+    line-height:31px;
+    z-index: 200;
+    width: 500px;
+    top: 55px;
+    left: 40px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    #points-container {
+        position:relative;
+        left:-52px;
+        top:10px;
+    }
+    #points-copy {
+        -webkit-font-smoothing: initial;
+    }
+    #thousands-countdown,
+    .hundreds-countdown {
+        display: inline;
+    }
+    #thousands-countdown {
+        position: absolute;
+        text-align: right;
+        font-size:70px;
+        left:56px;
+    }
+    #comma-countdown {
+        position: relative;
+        display: inline;
+        font-size:70px;
+        left: 127px;
+    }
+    #hundreds-countdown {
+        position: absolute;
+        text-align: left;
+        font-size:70px;
+        top:0px;
+        left: 139px;
+    }
+    #bonus {
+        position: absolute;
+        left: 261px;
+        top: 4px;
+        font-size:45px;
+    }
+    #asterisk {
+        font-family: 'Ciutadella-Regular';
+        display: inline-block;
+        font-size: 18px;
+        position: relative;
+        top:-20px;
+        left:1px;
+    }
+    #qantas-points {
+        position:absolute;
+        left:80px;
+        top:65px;
+        font-size:50px;
+    }
+}
+
+// LOGOS
+#logos-container {
+    position: absolute;
+    z-index: 200;
+    left: 682px;
+    bottom: 158px;
+}
+
+.logo-qantas {
+    position: absolute;
+    z-index: 191;
+    width: 175px;
+    height: 55px;
+    left: 34px;
+    top: -35px;
+}
+
+.logo-qantas-money {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+}
+
+.logo-divider-line {
+    position: absolute;
+    width: 1px;
+    height: 39px;
+    left: 158px;
+    top: 0px;
+    background-color: #000000;
+}
+
+.logo-partner {
+    position: absolute;
+    height: 42px;
+    width: 89px;
+    left: 157px;
+    top: -2px;
+}
+
+// CARD FLIP
+.cardWrapper{
+  width:180px;
+  height:113px;
+  top:67px;
+  right:120px;
+  position:relative;
+  float:right;
+  cursor:pointer;
+  -webkit-font-smoothing:antialiased;
+  z-index: 200;
+  transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+}
+
+.cardFace{
+  position:absolute;
+  overflow:hidden;
+  img {
+    width:180px;
+    height:113px;
+  }
+}
+
+#cta-button {
+    position: absolute;
+    display: block;
+    right: -60px;
+    top: 42px;
+}
+
+.terms-frame-01,
+.terms-frame-02,
+.terms-frame-03,
+.terms-endframe {
+    display: block;
+    position: absolute;
+    z-index: 8001;
+    width: 440px;
+    text-align: left;
+    left: 9px;
+    bottom: 9px;
+    color:#ffffff;
+    font-size: 8px;
+    line-height: 9px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+// Intro Shapes
+.shapes {
+    position: absolute;
+    top: 0px;
+    left: 340px;
+    width: 300px;
+    height: 250px;
+    z-index: 6500;
+    pointer-events:none;
+}
+
+#mask-shape {
+    position: absolute;
+    width: 6866px;
+    height: 4833px;
+    top: -1000px;
+    left: -1000px;
+    z-index: 6500;
+}
+
+#blue-shape {
+    position: absolute;
+    width: 113px;
+    height: 111px;
+    top: 0px;
+    left: 0px;
+    z-index: 6900;
+}
+
+#blue-shape-small {
+    position: absolute;
+    width: 64px;
+    height: 68px;
+    top: 0px;
+    left: 0px;
+    z-index: 6900;
+}
+
+// Base Shapes
+#base-red {
+    position: absolute;
+    z-index: 105;
+    left: 0px;
+    top: 0px;
+    width: 970px;
+    height: 250px;
+}
+
+#partnership-white-shape-small {
+    position: absolute;
+    z-index: 112;
+    left: 380px;
+    top: 40px;
+    width: 838px;
+    height: 462px;
+}
+
+#partnership-white-shape {
+    position: absolute;
+    z-index: 115;
+    height: 300px;
+    width: 544px;
+    top:-15px;
+    left: 450px;
+}
+
+#red-gradient {
+    position: absolute;
+    z-index: 110;
+    left: 0px;
+    top: 0px;
+    width: 838px;
+    height: 462px;
+}
+
+#solid-red-base {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 970px;
+    height: 250px;
+    background-color: #d00914;
+    z-index: 0;
+}
+
+// Base Images
+.bg-image {
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    top: 0px;
+    left: 0px;
+    margin: auto;
+    z-index: 100;
+}
+
+.bg-image-01 {
+    position: absolute;
+    z-index: 130;
+}
+
+.bg-image-02 {
+    position: absolute;
+    z-index: 131;
+}
+
+.clicktag {
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    width: 930px;
+    height: 220px;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    z-index: 9999;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: none;
+}
+
+.overlay h6 {
+    font-size: 16px;
+    color: #E0001A;
+}
+
+.overlay-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 33px;
+    cursor: pointer;
+}
+
+.overlay-close img {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+
+.overlay-close:hover img {
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+}
+
+.overlay-body {
+    font-size: 10px;
+    padding-top: 8px;
+    font-family: 'Ciutadella-Regular';
+    line-height: 14px;
+    max-height: 184px;
+    overflow-y: scroll;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    button {
+        padding: 7px 22px 7px;
+    }
+}
